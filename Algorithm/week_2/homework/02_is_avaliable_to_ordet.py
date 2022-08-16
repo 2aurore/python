@@ -7,6 +7,7 @@ def is_available_to_order(menus, orders):
     menus_set = set(menus)
     for order in orders:
         if order not in menus_set:
+            # 주문하고자 하는 메뉴들 중 1개라도 없으면 false를 반환하게 됨
             return False
     return True
 
